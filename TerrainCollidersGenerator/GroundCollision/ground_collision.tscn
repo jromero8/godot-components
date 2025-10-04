@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c51jtl05c4wha"]
+
+[ext_resource type="Script" uid="uid://lvorle2sa3b4" path="res://TerrainCollidersGenerator/GroundCollision/ground_collision.gd" id="1_c7cq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1y07"]
+resource_local_to_scene = true
+size = Vector2(32, 32)
+
+[node name="GroundCollision" type="StaticBody2D"]
+collision_layer = 4
+script = ExtResource("1_c7cq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b1y07")
+debug_color = Color(0.878547, 0.000381966, 0.827098, 0.42)
